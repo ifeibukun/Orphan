@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@500;700;800&display=swap');
+        *{
+            list-style-type: none;
+            
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+
+        }
+
+        .navigations{
+            display: none;
+        }
+
+        ul li{
+            display: inline-block;
+        }
+        .desktop-navigation{
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            height: 100px;
+            align-items: center;
+            font-family: 'Karla', sans-serif;
+        }
+
+        a{
+            color: #fff;
+            padding: 5px;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .logo{
+            margin-left: 100%;
+            color: #fff;
+        }
+        a:hover{
+            color: orangered;
+
+        }
+    
+
+        @media (max-width:600px) {
+
+
+        .navigations{
+            font-family: 'Karla', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            color: #fff;
+            align-items: center;
+            height: 100px;
+        }
+        .navbars{
+            margin-right: 0px;
+        }
+        ul li{
+            display:block;
+            margin-top: 50px;
+        }
+        
+        a{
+            color: #fff;
+            padding: 0px;
+            text-decoration: none;
+            margin-right: 0px;
+        }
+        a:checked{
+            color: ;
+            
+        }
+      
+        .logo{
+            font-size: 20px;
+        }
+        .navbars{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width:0;
+            background-color: orangered;
+            height:100%; 
+            z-index: 1;
+            line-height:normal;
+            transition: 0.3s;
+            overflow-x: hidden;
+            text-align: center;
+
+        }
+
+        .icon-menu{
+            display: block;
+            margin-left: 350%;
+            }
+        .close-menu{
+            display: block;
+            margin-left: 75%;
+        }
+        .header{
+            display: flex;
+        }
+        .logo{
+          margin-left: 30%;
+        }
+
+        .desktop-navigation{
+            display: none;
+        }
+       
+
+        }
+        .whole-container{
+            position: fixe;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="whole-container">
+        <div class="desktop-navigation">
+
+            <div class="header">
+                <div class="logo">Jesus Kids'</div>
+            </div>
+
+            <div class="navbar">
+                <ul>
+                    <li><a href="homepage.php">Homepage</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="signup.php">Sign up</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="navigations">
+
+            <div class="header">
+                <div class="logo">JKO</div>
+                <div class=" icon-menu"><img id="openmenu" src="./image/icon-menu.svg" alt=""></div>
+            </div>
+            <div class="navbars" id="navbars">
+                <ul>
+                    <li><a href="javascript:void(0)"><img id="closemenu" class="close-menu" src="./image/icon-close-menu.svg" alt=""></a></li>
+                    <li><a href="homepage.php">Homepage</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="signup.php">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+       
+        var menu = document.getElementById("openmenu");
+        var navbar = document.getElementById("navbars");
+        menu.addEventListener("click", function(){
+            navbar.style.width = "240px";
+        })
+
+        var close = document.getElementById("closemenu");
+        var navbar = document.getElementById("navbars");
+        close.addEventListener("click", function(){
+            navbar.style.width = "0px"
+        })
+    </script>
+</body>
+</html>

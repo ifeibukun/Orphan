@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orphanage Homepage</title>
+  <style>
+    .containers{
+        margin-top: 2%;
+        background-color: rgba(0, 0, 0, 0.66);
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    a{
+        color: white;
+        display: block;
+    }
+    .s_ul .s_li{
+        display: block;
+    }
+    .l_footer{
+        text-align: center;
+    }
+    .foot-header{
+        font-size: 20px;
+        font-weight: bolder;
+        color: orangered;
+    }
+
+    @media (max-width:600px) {
+        .containers{
+        background-color: rgba(0, 0, 0, 0.66);
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foot-header{
+        text-align: center  ;
+    }
+    .street{
+        text-align: center;
+    }
+    }
+
+  </style>
+</head>
+<body>
+
+  <footer class="footers">
+    <div class="containers">
+      <div class="section quick-links">
+        <div class="foot-header">Quick Links</div>
+        <ul class="s_ul">
+          <li class="s_li"><a href="homepage.php">Home</a></li>
+          <li class="s_li"><a href="#">About Us</a></li>
+          <li class="s_li"><a href="#">Login</a></li>
+          <li class="s_li"><a href="signup.php">Sign up</a></li>
+          <li class="s_li"><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="section social-icons">
+        <div class="foot-header">Social Media</div>
+        <a href="#"><i class="fas-solid fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="section contact-info">
+        <div class="foot-header">Contact info</div>
+        <p>Email: info@orphanage.org</p>
+        <p>+234 708 909 9446</p>
+        <p>+234 803 788 4070</p>
+      </div>
+      <div class="section address">
+        <div class="foot-header">Address</div>
+        <p class="street">18, ifelodun Street, Iwo Road,Academy Market <br> Area,(The Street Directly Opposite to MRS Filling Station) <br> Oyo State, Nigeria</p>
+      </div>
+      
+      
+    </div>
+    <p class="l_footer">&copy; 2024 Jesus Kids' Orphanage. All rights reserved. | Designed by <a href="#" target="_blank">Azeez Marvelous</a></p>
+  </footer>
+
+</body>
+</html>
